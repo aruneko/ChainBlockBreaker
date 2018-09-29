@@ -117,10 +117,11 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
     }
 
     private fun breakChain(minY: Int, targetBlock: Block, player: Player, blockCondition: (Block) -> Boolean) {
-        if (getBoolMetadata(targetBlock, "isTarget")) {
+        val metadataKey = "isTarget"
+        if (getBoolMetadata(targetBlock, metadataKey)) {
             return
         }
-        targetBlock.setMetadata("isTarget", FixedMetadataValue(plugin, true))
+        targetBlock.setMetadata(metadataKey, FixedMetadataValue(plugin, true))
 
         for (y in minY..1) {
             for (x in -1..1) {
@@ -143,7 +144,7 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
             }
         }
         val mainHandItem = player.inventory.itemInMainHand
-        targetBlock.removeMetadata("isTarget", plugin)
+        targetBlock.removeMetadata(metadataKey, plugin)
         targetBlock.breakNaturally(mainHandItem)
     }
 }
