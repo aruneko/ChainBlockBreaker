@@ -25,7 +25,11 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
             Material.STRIPPED_DARK_OAK_LOG,
             Material.STRIPPED_JUNGLE_LOG,
             Material.STRIPPED_OAK_LOG,
-            Material.STRIPPED_SPRUCE_LOG -> true
+            Material.STRIPPED_SPRUCE_LOG,
+            Material.CRIMSON_STEM,
+            Material.STRIPPED_CRIMSON_STEM,
+            Material.WARPED_STEM,
+            Material.STRIPPED_WARPED_STEM -> true
             else -> false
         }
     }
@@ -53,7 +57,9 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
             Material.NETHER_QUARTZ_ORE,
             Material.REDSTONE_ORE,
             Material.GLOWSTONE,
-            Material.ANCIENT_DEBRIS -> true
+            Material.ANCIENT_DEBRIS,
+            Material.NETHER_GOLD_ORE,
+            Material.GILDED_BLACKSTONE -> true
             else -> false
         }
     }
