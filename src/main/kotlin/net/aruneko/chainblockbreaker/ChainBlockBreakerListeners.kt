@@ -52,7 +52,8 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
             Material.LAPIS_ORE,
             Material.NETHER_QUARTZ_ORE,
             Material.REDSTONE_ORE,
-            Material.GLOWSTONE -> true
+            Material.GLOWSTONE,
+            Material.ANCIENT_DEBRIS -> true
             else -> false
         }
     }
