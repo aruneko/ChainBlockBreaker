@@ -32,6 +32,7 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
 
     private fun isAxe(item: ItemStack): Boolean {
         return when(item.type) {
+            Material.NETHERITE_AXE,
             Material.DIAMOND_AXE,
             Material.GOLDEN_AXE,
             Material.IRON_AXE,
@@ -58,6 +59,7 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
 
     private fun isPickAxe(item: ItemStack): Boolean {
         return when(item.type) {
+            Material.NETHERITE_PICKAXE,
             Material.DIAMOND_PICKAXE,
             Material.GOLDEN_PICKAXE,
             Material.IRON_PICKAXE,
@@ -76,6 +78,7 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
 
     private fun isShovel(item: ItemStack): Boolean {
         return when(item.type) {
+            Material.NETHERITE_SHOVEL,
             Material.DIAMOND_SHOVEL,
             Material.GOLDEN_SHOVEL,
             Material.IRON_SHOVEL,
