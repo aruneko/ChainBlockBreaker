@@ -1,4 +1,4 @@
 name: ChainBlockBreaker
 main: net.aruneko.chainblockbreaker.ChainBlockBreaker
-version: 1.0.0
-api-version: 1.13
+version: 1.1.0
+api-version: 1.16
