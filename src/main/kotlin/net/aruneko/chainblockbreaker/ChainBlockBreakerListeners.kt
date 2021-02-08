@@ -86,7 +86,7 @@ class ChainBlockBreakerListeners(private val plugin: Plugin, private val server:
     }
 
     private fun getBoolMetadata(block: Block, key: String): Boolean {
-        val metadata = block.getMetadata(key).filter { it.owningPlugin.name == plugin.name }
+        val metadata = block.getMetadata(key).filter { it.owningPlugin?.name == plugin.name }
         return when(metadata.size) {
             0 -> false
             else -> metadata.first().asBoolean()
